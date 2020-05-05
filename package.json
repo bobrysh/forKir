@@ -1,0 +1,22 @@
+{
+  "name": "provafe1",
+  "version": "1.0.0",
+  "description": "Pagina HTML con informazioni su film",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mscalfi/ProvaFE1.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/mscalfi/ProvaFE1/issues"
+  },
+  "homepage": "https://github.com/mscalfi/ProvaFE1#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}

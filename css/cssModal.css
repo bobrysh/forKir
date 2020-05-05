@@ -1,0 +1,472 @@
+body{
+  margin: 0;
+}
+.container{
+  /* display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap; */
+}
+.swiper-slide{
+  border: 1px solid white;
+}
+.row{
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card{
+  margin: 50px 50px;
+  box-shadow: 0px 0px 51px -3px rgba(0,0,0,0.5);
+  width: 330px;
+  height: 600px;
+  background-color: grey;
+}
+.card:hover{
+  box-shadow: 0px 0px 51px -3px rgba(0,0,0,1);
+}
+.card:hover .btn{
+  transform: scale(1.01);
+  opacity: 0.9;
+  /* text-transform: uppercase; */
+}
+.card-body{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.card-text{
+  margin: 5px 5px;
+}
+.btn-primary{
+  position: relative;
+  top: 20px;
+  left: 0px;
+  background-color: #C8385A;
+  height: 50px;
+  width: 260px;
+  border: none;
+  border-radius: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.btn-search{ 
+  position: relative;
+  top: 0px;
+  left: 0px;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  height: 50px;
+  width: 80px;
+  background-color: #C8385A;
+  cursor: pointer;
+}
+.btn-search:hover{
+  opacity: 0.9;
+}
+.navbar{
+  height: 200px;
+  /* text-align: center; */
+  color: white;
+  font-size: 34px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+
+
+/* preloader */
+.preloader__wrap {
+    position: fixed;
+    background: #000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 200;
+    transition: 1s all;
+    opacity: 1;
+    visibility: visible;
+}
+
+.preloader {
+    width: 150px;
+    height: 150px;
+    border: 15px solid #FFFFFF;
+    border-top-color: #FFFF00;
+    border-bottom-color: #FF00FF;
+    border-radius: 50%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    animation: 1s animation_loader infinite linear;
+}
+
+.unload {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes animation_loader {
+    from {
+        transform: translate(-50%, -50%) rotate(0deg);
+    }
+
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+body{
+    background-color: black;
+}
+
+.navbar{
+    background-color: #1c1c1c;
+}
+
+.footer__wrap{
+  margin-top: 80px;
+  height: 100px;
+  background-color: #1c1c1c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 34px;
+}
+
+.keyboardStyle{
+    background-image: url(keyboard.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+    background-color: transparent;
+    border-width: 0px;
+    cursor: pointer;
+    height: 40px;
+    width: 40px;
+    position: relative;
+    top: 8px;
+    outline: none;
+    left: -95px;
+  }
+
+
+
+
+
+
+
+
+/* The Modal (background) */
+
+.modal {
+    display: none;    /* Hidden by default */
+    position: fixed;    /* Stay in place */
+    z-index: 1;    /* Sit on top */
+    left: 0px;
+    top: 0px;
+    width: 100%;    /* Full width */
+    height: 100%;    /* Full height */
+    overflow: auto;    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);    /* Black w/ opacity */
+    
+
+}
+
+
+/* Modal Content/Box */
+
+.modal-content {
+    background-color: #fefefe;
+    margin: 15% auto;
+    padding: 10px;
+    border: 1px solid #888;
+    width: fit-content;
+    position: relative;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.4s;
+    animation-name: animatetop;
+    animation-duration: 0.4s
+}
+
+.modal.fade .modal-dialog {
+  transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
+}
+
+
+.modal-dialog{
+  position: relative;
+  width: auto;
+  margin: 0.5rem;
+  pointer-events: none;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 500px;
+    margin: 1.75rem auto;
+  }
+}
+
+.modal.show .modal-dialog {
+  transform: none;
+}
+
+.modal-header {
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-align: start;
+  align-items: flex-start;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding: 1rem 1rem;
+  border-bottom: 1px solid #dee2e6;
+  border-top-left-radius: calc(0.3rem - 1px);
+  border-top-right-radius: calc(0.3rem - 1px);
+}
+
+.modal-body {
+  position: relative;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding: 1rem;
+}
+
+.card-text {
+  margin: 5px 5px;
+}
+
+/* Add Animation */
+
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+    to {
+        top: 0;
+        opacity: 1
+    }
+}
+
+.modal:target {
+    display: block;
+}
+
+#closeModal {
+    margin: 0 auto;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+  }
+
+.search__input::-webkit-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-webkit-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-o-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-o-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-moz-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-moz-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-ms-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-ms-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input {
+    max-width: 628px;
+    font-weight: 300;
+    line-height: 36px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    position: relative;
+    background: transparent;
+    width: 640px;
+    height: 50px;
+    padding-left: 50px;
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    background-position: 60px 0px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 2px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 790px) {
+    .search__input {
+      background-position: 0px 0px;
+    }
+  }
+  
+  .search__input:focus {
+    width: 640px;
+    max-width: 1280px;
+    text-align: left;
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-bottom: 2px solid #fdce25;
+    padding-left: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.4s ease 0s;
+    box-sizing: border-box;
+  }
+  
+  .search__input:not(:focus) {
+    transition: all 0.4s ease 0s;
+  }
+  
+  /*ФИКСИРОВАННЫЙ БЛОК*/
+  .search__input--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    background: rgba(28, 28, 28, 0.8);
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    text-align: left;
+    background-position: 80px 0px;
+    padding-right: 80px;
+    padding-left: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .search__input--fixed:focus {
+    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    max-width: 1440px;
+    background-position: 80px 0px;
+    padding-right: 80px;
+    padding-left: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
