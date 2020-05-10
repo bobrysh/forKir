@@ -1,19 +1,14 @@
-/* eslint-disable linebreak-style */
+import {
+  russianKeys, russianKeysUP, englishKeys, englishKeysUP,
+} from './keyboardConstants';
+import { onSearchClick } from '../search/clickSearch';
+import { keyboard } from '../constants/constants';
+
 window.onload = function init() {
-
-	setTimeout(function() {
-		let preloader = document.querySelector('.preloader__wrap');
-		if (!preloader.classList.contains('unload')) {
-			preloader.classList.add('unload');
-		}
-	}, 1000);
-
   let languageKeys = '';
   const rows = [];
-  // const inputPlace = document.createElement('textarea');
   const inputPlace = document.getElementById('search');
   const keyboardPlace = document.createElement('div');
-  // inputPlace.className = 'input';
   keyboardPlace.className = 'keyboard';
   keyboardPlace.id = 'keyboard';
   document.body.append(keyboardPlace);
@@ -73,49 +68,37 @@ window.onload = function init() {
   function texting() {
     keyboardPlace.addEventListener('click', () => {
       event.target.classList.remove('animate');
-      // const inputPlace = document.querySelector('.input');
       const carriage = inputPlace.selectionStart;
       inputPlace.focus();
       if (event.target.textContent === 'Backspace') {
         inputPlace.value = inputPlace.value.slice(0, carriage - 1) + inputPlace.value.slice(carriage);
         inputPlace.selectionStart = carriage - 1;
         inputPlace.selectionEnd = carriage - 1;
-      } else if (event.target.textContent == 'Space') {
+      } else if (event.target.textContent === 'Space') {
         inputPlace.value += ' ';
       } else if (event.target.textContent === 'Tab') {
         inputPlace.setRangeText('    ');
         inputPlace.selectionStart = carriage + 4;
-      } else if (event.target.textContent == 'Enter') {
-        // inputPlace.setRangeText('\n');
-        // inputPlace.selectionStart = carriage + 1;
-        let preloader = document.querySelector('.preloader__wrap');
-        preloader.classList.toggle('unload');
-        setTimeout(function() {
-          preloader.classList.toggle('unload');
-          onSearchClick();
-        }, 1000);
-      } else if (event.target.textContent == 'Delete') {
+      } else if (event.target.textContent === 'Enter') {
+        onSearchClick();
+      } else if (event.target.textContent === 'Delete') {
         inputPlace.value = inputPlace.value.slice(0, carriage) + inputPlace.value.slice(carriage + 1);
         inputPlace.selectionStart = carriage;
         inputPlace.selectionEnd = carriage;
-      } else if (event.target.textContent == 'Caps Lock') {
+      } else if (event.target.textContent === 'Caps Lock') {
         document.querySelector('.keyboard').classList.toggle('toUpperCase');
         if (document.querySelector('.keyboard').classList.contains('toUpperCase')) {
-          capsed = true;
           if (localStorage.getItem('language') === 'rus') {
             changeLanguage('rusUP');
           } else {
             changeLanguage('enUP');
           }
+        } else if (localStorage.getItem('language') === 'rus') {
+          changeLanguage('rus');
         } else {
-          capsed = false;
-          if (localStorage.getItem('language') === 'rus') {
-            changeLanguage('rus');
-          } else {
-            changeLanguage('en');
-          }
+          changeLanguage('en');
         }
-      } else if (event.target.textContent == 'FN') {
+      } else if (event.target.textContent === 'FN') {
         if (localStorage.getItem('language') === 'rus') {
           changeLanguage('en');
           localStorage.setItem('language', 'eng');
@@ -129,7 +112,7 @@ window.onload = function init() {
           changeLanguage('rus');
           localStorage.setItem('language', 'rus');
         }
-      } else if (event.target.className !== 'key' || event.target.textContent == 'Ctrl' || event.target.textContent == 'Win' || event.target.textContent == 'Alt' || event.target.textContent == 'FN') return;
+      } else if (event.target.className !== 'key' || event.target.textContent === 'Ctrl' || event.target.textContent == 'Win' || event.target.textContent == 'Alt' || event.target.textContent == 'FN') return;
       else {
         event.target.classList.add('animate');
         inputPlace.value += event.target.textContent;
@@ -139,3 +122,8 @@ window.onload = function init() {
 
   texting();
 };
+
+
+keyboard.addEventListener('click', () => {
+  document.getElementById('keyboard').classList.toggle('hidden');
+});
