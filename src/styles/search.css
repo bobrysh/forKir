@@ -1,0 +1,189 @@
+.btn-search{ 
+    position: relative;
+    top: 0px;
+    left: 0px;
+    border: none;
+    border-radius: 10px;
+    color: whitesmoke;
+    height: 50px;
+    width: 80px;
+    background-color: #007aff;
+    cursor: pointer;
+  }
+
+  .btn-search:hover{
+    opacity: 0.9;
+  }
+  
+  .search {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    box-sizing: border-box;
+    margin-bottom: 24px;
+  }
+
+.search__input::-webkit-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-webkit-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-o-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-o-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-moz-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-moz-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input::-ms-search-cancel-button {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BSq.svg");
+  }
+  .search__input::-ms-search-cancel-button:hover {
+    position: relative;
+    -webkit-appearance: none;
+    -o-appearance: none;
+    -moz-appearance: none;
+    -ms-appearance: none;
+    height: 32px;
+    width: 32px;
+    background-image: url("https://svgshare.com/i/BTi.svg");
+    cursor: pointer;
+  }
+  
+  .search__input {
+    max-width: 628px;
+    font-weight: 300;
+    line-height: 36px;
+    font-size: 24px;
+    color: rgba(255, 255, 255, 0.4);
+    text-align: center;
+    position: relative;
+    background: transparent;
+    width: 640px;
+    height: 50px;
+    padding-left: 50px;
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    background-position: 60px 0px;
+    border: none;
+    border-bottom: 2px solid #ffffff;
+    border-radius: 2px;
+    outline: none;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    box-sizing: border-box;
+  }
+  @media screen and (max-width: 790px) {
+    .search__input {
+      background-position: 0px 0px;
+    }
+  }
+  
+  .search__input:focus {
+    width: 640px;
+    max-width: 1280px;
+    text-align: left;
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    background-position: 0px 0px;
+    border-bottom: 2px solid #007aff;;
+    padding-left: 50px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.4s ease 0s;
+    box-sizing: border-box;
+  }
+  
+  .search__input:not(:focus) {
+    transition: all 0.4s ease 0s;
+  }
+  
+  .search__input--fixed {
+    position: fixed;
+    top: 0;
+    z-index: 99;
+    width: 100%;
+    max-width: 1440px;
+    box-sizing: border-box;
+    background: rgba(28, 28, 28, 0.8);
+    background-image: url("https://svgshare.com/i/BF9.svg");
+    background-repeat: no-repeat;
+    text-align: left;
+    background-position: 80px 0px;
+    padding-right: 80px;
+    padding-left: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  .search__input--fixed:focus {
+    border-bottom: 2px solid #ffffff;
+    width: 100%;
+    max-width: 1440px;
+    background-position: 80px 0px;
+    padding-right: 80px;
+    padding-left: 130px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
