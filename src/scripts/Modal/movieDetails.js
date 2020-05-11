@@ -14,6 +14,7 @@ export async function getMovieDetails(movie) {
     movie.setGenre(result.Genre);
     movie.setPlot(result.Plot);
     movie.setRated(result.Rated);
+    movie.setimdbRating(result.imdbRating);
     movie.setPoster(result.Poster);
     movie.validate();
   } catch (err) {

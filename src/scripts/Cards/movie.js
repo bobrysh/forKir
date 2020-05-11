@@ -1,9 +1,10 @@
 export class Movie {
-  constructor(title, year, type, poster, imdbID) {
+  constructor(title, year, type, poster, imdbRating, imdbID) {
     this.title = title;
     this.year = year;
     this.type = type;
     this.poster = poster;
+    this.imdbRating = imdbRating;
     this.imdbID = imdbID;
   }
 
@@ -29,6 +30,10 @@ export class Movie {
 
   setRated(rated) {
     this.rated = rated;
+  }
+
+  setimdbRating(imdbRating) {
+    this.imdbRating = imdbRating;
   }
 
   setPoster(poster) {

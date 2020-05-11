@@ -13,7 +13,7 @@ export function createCards(aDisplayMovies) {
     posterWrapper.className = 'posterWrapper';
 
     const poster = document.createElement('img');
-    poster.src = movieElement.poster;
+    poster.src = movieElement.poster === 'N/A' ? '../src/assets/No_image.svg' : movieElement.poster;
 
     const cardColBody = document.createElement('div');
     cardColBody.className = 'card-inner';
@@ -29,6 +29,10 @@ export function createCards(aDisplayMovies) {
     pYear.className = 'card-text';
     pYear.textContent = `Year: ${movieElement.year}`;
 
+    const imdbRating = document.createElement('p');
+    imdbRating.className = 'card-text';
+    imdbRating.textContent = `Rating: ${movieElement.imdbRating}`;
+
     const pType = document.createElement('p');
     pType.className = 'card-text';
     pType.textContent = `Type: ${movieElement.type}`;
@@ -42,6 +46,7 @@ export function createCards(aDisplayMovies) {
     cardBody.appendChild(cardTitle);
     cardBody.appendChild(pYear);
     cardBody.appendChild(pType);
+    cardBody.appendChild(imdbRating);
     cardBody.appendChild(detailsButton);
     posterWrapper.appendChild(poster);
     cardColBody.appendChild(cardBody);

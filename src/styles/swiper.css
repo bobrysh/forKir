@@ -538,5 +538,23 @@ button.swiper-pagination-bullet {
 }
 .swiper-container {
   width: 928px;
-  height: 690px;
+  height: 730px;
+  }
+
+  @media screen and (max-width: 900px) {
+    .swiper-container {
+      width: 618px;
+      margin-top: 80px;
+    }
+    .btn-search{
+      top: 60px !important;
+      left: 50% !important;
+      transform: translateX(-50%) ;
+    }
+  }
+  @media screen and (max-width: 600px) {
+    .swiper-container {
+      width: 308px;
+    }
+
   }
