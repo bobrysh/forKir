@@ -1,49 +1,213 @@
-<!DOCTYPE html>
-<html lang="en">
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../src/assets/favicon.ico" type="image/x-icon">
-    <title>Movies</title>
-</head>
+		<title>reveal.js</title>
 
-<body>
+		<link rel="stylesheet" href="dist/reset.css">
+		<link rel="stylesheet" href="dist/reveal.css">
+		<link rel="stylesheet" href="dist/theme/league.css" id="theme">
 
-    <div class="preloader__wrap">
-        <div class="preloader preloader__out">
-          <div class="preloader preloader___inner"></div>
-        </div>
-      </div>
-    <nav class="header">
-        <a class="header-brand">Movie Catalog</a>
-    </nav>
-    <div class="search">
-        <form class="form-inline" onSubmit="return false;">
-            <input type="search" autocomplete="off" autofocus placeholder="Поиск фильмов" class="search__input" id="search">
-            <input type="button" id="keyboardButton" value="" class="keyboardStyle">
-            <button class="btn btn-outline-success btn-search my-2 my-sm-0" type="button" id="searchButton">Поиск</button>
-        </form>
-    </div>
+		<!-- Theme used for syntax highlighted code -->
+		<link rel="stylesheet" href="plugin/highlight/monokai.css" id="highlight-theme">
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section><div class="title_custom">React JS</div>By Bobryshev Pavel</section>
+				<section><div class="title_custom">React</div>
+				<ul>
+					<li>
+						Front end Javascript library to build user interfaces
+					</li>
+					<li>
+						Makes it easier to create responsive web pages
+					</li>
+					<li>
+						Developed by Facebook
+					</li>
+				</ul>
+				<div class="logo_imgs logo_imgs_facebook"></div>
+				<div class="logo_imgs logo_imgs_inst"></div>
+				<div class="logo_imgs logo_imgs_reddit"></div>
+				<div class="logo_imgs logo_imgs_netflix"></div>
+				</section>
+				<section><div class="title_custom">Fundamentals</div></section>
+				<section><div class="title_custom">Component</div>
+					<ul>
+						<li>
+							Fundamental building block of React
+						</li>
+						<li>
+							Lets you split up the UI into independent, reusable pieces, and think about each piece in isolation
+						</li>
+						<li>
+							Conceptually they are like JavaScript functions
+							<ul>
+								<li>
+									Accept arbitrary inputs called "props"
+								</li>
+								<li>
+									Return React elements that describe what should appear on the screen
+								</li>
+							</ul>			
+						</li>
+					</ul>
+				</section>
+				<section><div class="title_custom">Component Example</div>
+					<div class="component_example"></div>
+				</section>
+				<section><div class="title_custom">Props</div>
+				<ul>
+					<li>
+						Passed down to component from parent component
+					</li>
+					<li>
+						Should be immutable or "pure"
+						<ul>
+							<li>
+								Read-Only, never modified
+							</li>
+						</ul>
+					</li>
+					<li>
+						<b>All React components must act like pure functions with respect to their props</b>
+					</li>
+					
+					<div class="code">
+						function sum(a,b){<br>
+							&nbsp;&nbsp;&nbsp;return a + b;<br>
+						}
+					</div>
+					<div class="code">
+						function withdraw(account, amount){<br>
+							&nbsp;&nbsp;&nbsp;account.total -= amount;<br>
+						}
+					</div>
+				</ul>
+				</section>
+				<section><div class="title_custom">State</div>
+					<ul>
+						<li>
+							Represents the internal state of the component
+						</li>
+						<li>
+							When a components state data changes, the component is re-rendered
+						</li>
+					
+					</ul>	
+					<div class="state"></div>
+				</section>
+				<section>
+					<div class="title_custom">Virtual DOM</div>
+					
+					<ul>
+						<li>
+							Document Object Model (DOM)
+						</li>
+						<li>
+							The real DOM is the structure of a webpage
+						</li>
+					</ul>	
+					<div class="tree"></div>
+				</section>
+				<section>
+					<div class="title_custom">Virtual DOM</div>
+					
+					<ul>
+						<li>
+							DOM manipulation os the heart of the modern, interactive web
+						</li>
+						<li>
+							Unfortunately, it is a lot slower than most JavaScript operations
+						</li>
+						<li>
+							Slowness is made worse by the fact that most JavaScript frameworks update the DOM much more then they have to
+						</li>
+						<li>
+							Example: updating a list
+						</li>
+					</ul>
+				</section>
+				<section>
+					<div class="title_custom">Virtual DOM</div>
+					
+					<ul>
+						<li>
+							To address this inefficiency, React popularized the virtual DOM for efficient re-rendering of the actual DOM
+						</li>
+						<li>
+							The virtual DOM is a lightweight copy of the real DOM
+						</li>
+						<li>
+							React aims to re-render the virtual tree only when the state changes
+						</li>
+						<li>
+							Once the virtual DOM has updated, React compares the virtual DOM with a virtual DOM snapshot before the state change
+						</li>
+						<li>
+							It then compares which objects have been changed and only updates those objects on the real DOM
+						</li>
+					</ul>
+				</section>
+				<section><div class="title_custom">JSX</div>
+					<ul>
+						<li>
+							JavaScript extension
+						</li>
+						<li>
+							Allows us to combine Javascript and HTML
+						</li>
+					</ul>
+					<div class="jsx"></div>
+				</section>
+				<section><div class="title_custom">PROS</div>
+					<ul>
+						<li>
+							Fast and efficient through the use of a virtual dom
+						</li>
+						<li>
+							Makes writing Javascript easier with JSX
+						</li>
+						<li>
+							Easy to read and understand code
+						</li>
+						<li>
+							React dev tools (Chrome extensions makes debugging easier)
+						</li>
+					</ul>
+				</section>
+				<section><div class="title_custom">CONS</div>
+					<ul>
+						<li>
+							React is only the view layer
+						</li>
+						<li>
+							Learning curve
+						</li>
+					</ul>
+				</section>
+				<section>Thank you
+				for your attention</section>
+			</div>
+		</div>
 
-    <div class="modal fade bd-example-modal-lg show" id="movieDetails" role="dialog"></div>
+		<script src="dist/reveal.js"></script>
+		<script src="plugin/notes/notes.js"></script>
+		<script src="plugin/markdown/markdown.js"></script>
+		<script src="plugin/highlight/highlight.js"></script>
+		<script>
+			// More info about initialization & config:
+			// - https://revealjs.netlify.app/initialization/
+			// - https://revealjs.netlify.app/config/
+			Reveal.initialize({
+				hash: true,
 
-    <div class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">Slide 1</div>
-            <div class="swiper-slide">Slide 2</div>
-            <div class="swiper-slide">Slide 3</div>
-        </div>
-    </div>
-    <div class="arrow-container">
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-pagination"></div>
-    </div>
-    <div class="footer__wrap">
-        <div class="footer">&copy; 2020 <a href="https://github.com/bobrysh" target="_blank">bobrysh</a></div>
-    </div>
-
-<script src="main.ba0ef07e12af29c93898.js"></script></body>
-
+				// Learn about plugins: https://revealjs.netlify.app/plugins/
+				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+			});
+		</script>
+	</body>
 </html>
